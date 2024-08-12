@@ -27,6 +27,9 @@ jobs:
         shell: Rscript {0}
         run: rmarkdown::render("index.Rmd")
 
+      # Commit
+      - uses: stefanzweifel/git-auto-commit-action@v5
+
       # Publish rmd/ to GitHub pages
       - name: Publish to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4.5.0
